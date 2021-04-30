@@ -1,18 +1,18 @@
 {% set name = "aurorafusion" %}
-{% set version = "0.3.0" %}
+{% set version = "0.3.2" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: d421507672ab7b7e69c8595a289244c29a25b288bd844f26d623eff0ae825463
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 3a27655dd9af195b028d3cd00592c200bc70e4640d3966aabb55e911be4d0695
 
 build:
-  number: 2
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -27,17 +27,18 @@ requirements:
     - {{ pin_compatible('numpy') }}
     - scipy
     - matplotlib-base
+    - requests
 
 test:
   imports:
     - aurora
 
 about:
-  home: "https://aurora-fusion.readthedocs.io"
+  home: https://aurora-fusion.readthedocs.io
   license: MIT
   license_family: MIT
   license_file: USER_AGREEMENT.txt
-  summary: 'Modern toolbox for impurity transport, neutrals and radiation modeling in fusion plasmas'
+  summary: Modern toolbox for impurity transport, neutrals and radiation modeling in fusion plasmas
   description: |
     Aurora is a package to simulate heavy-ion transport, neutrals and radiation in magnetically-confined plasmas. 
     It offers a 1.5D impurity transport forward model inheriting from the historical STRAHL code, 
