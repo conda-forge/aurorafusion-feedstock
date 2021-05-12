@@ -1,5 +1,5 @@
 {% set name = "aurorafusion" %}
-{% set version = "0.3.3" %}
+{% set version = "0.3.4" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: dcb61cf22ef9c72133d2e66ea7c00b74aacb3cd55b77232b7cb61e29227c194a
+  sha256: d160c277396ae66d5056618b346c8d1957bcb0eef70136c142c9765950d4d650
 
 build:
   number: 0
