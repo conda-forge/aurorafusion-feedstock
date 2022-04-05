@@ -30,7 +30,7 @@ requirements:
 
   run:
     - python
-    - {{ pin_compatible('numpy') }}
+    - numpy
     - scipy
     - matplotlib-base
     - pexpect
