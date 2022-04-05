@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8848a72f162e90818c044551ba9d6db311f350e5718cc36ef36eef49399ec0b4
+  sha256: 77a1eb151b86e045dd7299eb188c0cc1e6469ac0c7cb3fc5e602221ee689a4d9
 
 build:
   number: 0
@@ -21,13 +21,22 @@ requirements:
     - python
     - pip
     - numpy
+    - scipy
+    - matplotlib
+    - pexpect
+    - omfit_classes
+    - requests
+    - pandas
 
   run:
     - python
     - {{ pin_compatible('numpy') }}
     - scipy
     - matplotlib-base
+    - pexpect
+    - omfit_classes
     - requests
+    - pandas
 
 test:
   imports:
